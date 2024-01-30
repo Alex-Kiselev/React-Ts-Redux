@@ -4,7 +4,7 @@ import { ProductCardProps } from './ProductCard.props';
 
 function ProductCard(props: ProductCardProps) {
 	return (
-		<Link to={'/'} className={styles['link']}>
+		<Link to={`/product/${props.id}`} className={styles['link']}>
 			<div className={styles['card']}>
 				<div className={styles['head']} style={{ backgroundImage: `url('${props.image}')` }}>
 					<div className={styles['price']}>
@@ -26,6 +26,6 @@ function ProductCard(props: ProductCardProps) {
 			</div>
 		</Link>
 	);
-}
+} 
 
 export default ProductCard;
