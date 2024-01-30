@@ -8,6 +8,7 @@ export function Product() {
 	return <>
 		<Suspense fallback={'Загружаю...'}>
 			<Await
+			// errorElement можно юзать тоже тут
 				resolve={data.data}
 			>
 				{({ data }: { data: Product }) => (
